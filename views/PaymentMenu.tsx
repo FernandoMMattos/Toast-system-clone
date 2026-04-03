@@ -151,7 +151,7 @@ const PaymentMenu = ({ onBack, onSuccess }: Props) => {
           </PaymentButton>
 
           <PaymentButton onClick={handleClear}>C</PaymentButton>
-          <PaymentButton onClick={() => handleNumber(0)}>0</PaymentButton>
+          <PaymentButton onClick={() => setAmount((prev) => prev * 10)}>0</PaymentButton>
           <PaymentButton onClick={() => setAmount((prev) => prev * 100)}>
             00
           </PaymentButton>
@@ -175,7 +175,7 @@ const PaymentMenu = ({ onBack, onSuccess }: Props) => {
         </button>
         <button
           className="p-3 rounded cursor-pointer bg-blue-600 text-white"
-          onClick={() => handleCashPayment(amount === 0 ? total : amount)}
+          onClick={() => handleCashPayment(amount === 0 ? total : amount / 100)}
         >
           Cash
         </button>

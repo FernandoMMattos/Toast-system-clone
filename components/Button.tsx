@@ -4,10 +4,11 @@ type ButtonProps = {
   price?: number;
   textColor?: string
   disabled?: boolean
+  classname?: string
   onClick?: () => void;
 };
 
-const Button = ({ children, color, textColor, disabled = false, onClick }: ButtonProps) => {
+const Button = ({ children, color, textColor, disabled = false, onClick, classname }: ButtonProps) => {
   return (
     <button
       onClick={onClick}
@@ -22,6 +23,8 @@ const Button = ({ children, color, textColor, disabled = false, onClick }: Butto
         border-2
         ${textColor}
         disabled:bg-gray-500
+        ${classname}
+        sm:w-[90%]
     `}
     >
       {children}

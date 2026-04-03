@@ -12,7 +12,7 @@ export function ProductGrid({
   const { addItem } = useCart();
 
   return (
-    <section className="grid grid-cols-5 gap-2">
+    <section className="grid grid-cols-5 gap-2 sm:justify-around w-full">
       {products.map((product) => (
         <Button
           key={product.name}

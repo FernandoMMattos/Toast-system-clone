@@ -8,7 +8,7 @@ type Props = {
 
 export function CategoryNav({ onSelect }: Props) {
   return (
-    <nav className="flex gap-2">
+    <nav className="flex gap-2 sm:w-3/4">
       {Object.entries(categories).map(([key, category]) => (
         <Button
           key={key}

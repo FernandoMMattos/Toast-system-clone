@@ -14,7 +14,7 @@ export function SideMenu({ onSelectItem, selectedItemId, onCheckout }: Props) {
   const subtotal = calculateTotal(cart);
 
   return (
-    <aside className="w-max h-100% justify-around flex flex-col m-4 gap-4 bg-white p-4 rounded-md">
+    <aside className="w-max h-100% justify-around flex flex-col m-4 gap-4 bg-white p-4 rounded-md sm:w-1/3">
       <section className="flex justify-around items-center">
         <button className="bg-gray-300 p-2 rounded-md">User</button>
         <button className="bg-gray-300 p-2 rounded-md">Split</button>

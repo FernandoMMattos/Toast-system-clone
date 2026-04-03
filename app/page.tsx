@@ -31,7 +31,7 @@ export default function Home() {
   }
 
   return (
-    <section className="flex h-screen">
+    <section className="flex h-screen overflow-x-hidden">
       {view.type === "order_success" ? (
         <OrderFinished
           onDone={() => setView({ type: "category", category: "hot" })}
